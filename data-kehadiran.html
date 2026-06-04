@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Data Kehadiran</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1565c0">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <h2>Data Kehadiran</h2>
+
+    <button
+        class="btn btn-danger"
+        onclick="logout()">
+
+        Logout
+
+    </button>
+
+</div>
+
+<div class="container">
+
+    <div class="card">
+
+        <h3>Filter Data</h3>
+
+        <select
+            id="filterKelas"
+            onchange="tampilkanDataKehadiran()">
+
+            <option value="">
+                Semua Kelas
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <h3>Export Data</h3>
+
+        <select id="kelasExport">
+
+            <option value="">
+                Semua Kelas
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <button
+            class="btn btn-success"
+            onclick="exportExcel()">
+
+            Export Excel
+
+        </button>
+
+        <button
+            class="btn btn-danger"
+            onclick="resetData()">
+
+            Hapus Semua Data
+
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Nama</th>
+                    <th>Kelas</th>
+                    <th>Status</th>
+                    <th>Tanggal</th>
+                    <th>Waktu</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="tbodyAbsensi">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <a
+        href="dashboard-guru.html"
+        class="btn btn-warning">
+
+        Kembali
+
+    </a>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

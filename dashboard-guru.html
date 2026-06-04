@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard Guru</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1565c0">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <h2>Dashboard Guru</h2>
+
+    <button
+        class="btn btn-danger"
+        onclick="logout()">
+
+        Logout
+
+    </button>
+
+</div>
+
+<div class="container">
+
+    <div class="menu-grid">
+
+        <div class="menu-card">
+
+            <h3>
+                Generate QR
+            </h3>
+
+            <p>
+                Membuat QR absensi.
+            </p>
+
+            <a
+                href="generateqr.html"
+                class="btn">
+
+                Buka
+
+            </a>
+
+        </div>
+
+        <div class="menu-card">
+
+            <h3>
+                Data Kehadiran
+            </h3>
+
+            <p>
+                Melihat data siswa.
+            </p>
+
+            <a
+                href="data-kehadiran.html"
+                class="btn">
+
+                Buka
+
+            </a>
+
+        </div>
+
+        <div class="menu-card">
+
+            <h3>
+                Statistik
+            </h3>
+
+            <p>
+                Rekap absensi.
+            </p>
+
+            <a
+                href="statistik.html"
+                class="btn">
+
+                Buka
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

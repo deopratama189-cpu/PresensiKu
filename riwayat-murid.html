@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Riwayat Absensi</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1565c0">
+
+</head>
+<body>
+
+<div class="navbar">
+
+    <h2>Riwayat Absensi</h2>
+
+    <button
+        class="btn btn-danger"
+        onclick="logout()">
+
+        Logout
+
+    </button>
+
+</div>
+
+<div class="container">
+
+    <div class="stats">
+
+        <div class="stat-box">
+
+            <h2 id="riwayatHadir">
+                0
+            </h2>
+
+            <p>Hadir</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2 id="riwayatIzin">
+                0
+            </h2>
+
+            <p>Izin</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2 id="riwayatSakit">
+                0
+            </h2>
+
+            <p>Sakit</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2 id="riwayatTotal">
+                0
+            </h2>
+
+            <p>Total</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2 id="persentase">
+                0%
+            </h2>
+
+            <p>Persentase Kehadiran</p>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <a
+        href="dashboard-murid.html"
+        class="btn btn-warning">
+
+        Kembali
+
+    </a>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

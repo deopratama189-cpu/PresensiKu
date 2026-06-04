@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Generate QR</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1565c0">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+<body>
+
+<div class="navbar">
+
+    <h2>Generate QR</h2>
+
+    <button
+        class="btn btn-danger"
+        onclick="logout()">
+        Logout
+    </button>
+
+</div>
+
+<div class="container">
+
+    <div class="card center">
+
+        <h2>QR Absensi Hari Ini</h2>
+
+        <button
+            class="btn"
+            onclick="generateQR()">
+            Generate QR
+        </button>
+
+        <br><br>
+
+        <div id="qrcode"></div>
+
+    </div>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

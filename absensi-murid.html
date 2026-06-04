@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Absensi Murid</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1565c0">
+
+</head>
+<body>
+
+<div class="navbar">
+
+    <h2>Absensi Murid</h2>
+
+</div>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Form Absensi</h2>
+
+        <label>Status Kehadiran</label>
+
+        <select
+            id="status"
+            onchange="cekStatus()">
+
+            <option value="Hadir">
+                Hadir
+            </option>
+
+            <option value="Izin">
+                Izin
+            </option>
+
+            <option value="Sakit">
+                Sakit
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <!-- FORM IZIN / SAKIT -->
+
+        <div
+            id="formKeterangan"
+            style="display:none;">
+
+            <label>Alasan</label>
+
+            <textarea
+                id="alasan"
+                rows="4"
+                placeholder="Masukkan alasan..."
+                style="
+                    width:100%;
+                    padding:10px;
+                ">
+            </textarea>
+
+            <br><br>
+
+            <label
+                id="labelBukti">
+
+                Upload Bukti
+
+            </label>
+
+            <br>
+
+            <input
+                type="file"
+                id="bukti"
+                accept="image/*">
+
+        </div>
+
+        <br>
+
+        <!-- QR SCANNER -->
+
+        <div
+            id="reader"
+            style="
+                width:300px;
+                max-width:100%;
+                margin:auto;
+            ">
+        </div>
+
+        <br>
+
+        <button
+
+        id="btnScan"
+        class="btn btn-success"
+        onclick="mulaiScanner()">
+
+        Mulai Scan
+
+        </button>
+
+        <button
+            class="btn"
+            onclick="simpanAbsensi()">
+
+            Kirim Absensi
+
+        </button>
+
+        <button
+            class="btn btn-warning"
+            onclick="
+            window.location.href=
+            'dashboard-murid.html'
+            ">
+
+            Kembali
+
+        </button>
+        
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
