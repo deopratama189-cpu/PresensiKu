@@ -302,7 +302,8 @@ async function mulaiScanner(){
 
     }
 );
-    
+
+}
 /* ==========================
    DATA KEHADIRAN GURU
 ========================== */
