@@ -279,29 +279,30 @@ async function mulaiScanner(){
     );
 
     scanner.start(
-        {
-            facingMode:"environment"
-        },
-        {
-            fps:10,
-            qrbox:250
-        },
+    {
+        facingMode: "environment"
+    },
+    {
+        fps: 10,
+        qrbox: 250
+    },
+    function(decodedText){
 
-       function(decodedText){
+        if(decodedText.startsWith("ABSENSI-")){
 
-         if(decodedText.startsWith("ABSENSI-")){
             qrValid = true;
             alert("QR Valid");
             scanner.stop();
+
         }else{
+
             alert("QR Tidak Valid");
-             
+
         }
 
     }
 );
-
-}
+    
 /* ==========================
    DATA KEHADIRAN GURU
 ========================== */
