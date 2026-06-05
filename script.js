@@ -230,10 +230,12 @@ async function simpanAbsensi(){
 
 function generateQR(){
 
-    const kodeQR =
-    "ABSEN-" +
-    Date.now();
+    const hariIni =
+    new Date().toLocaleDateString("id-ID");
 
+    const kodeQR =
+    "ABSENSI-" + hariIni;
+    
     localStorage.setItem(
         "kodeQR",
         kodeQR
@@ -285,37 +287,43 @@ async function mulaiScanner(){
             qrbox:250
         },
 
-        function(decodedText){
+       function(decodedText){
 
-            const kodeAktif =
-            localStorage.getItem(
-                "kodeQR"
-            );
+    if(
+        decodedText.startsWith(
+            "ABSENSI-"
+        )
+    ){
 
-            if(
-                decodedText ===
-                kodeAktif
-            ){
+        qrValid = true;
 
-                qrValid = true;
+        alert(
+            "QR Valid"
+        );
 
-                alert(
-                    "QR Valid"
-                );
+        scanner.stop();
 
-                scanner.stop();
+    }else{
 
-            }else{
+        alert(
+            "QR Tidak Valid"
+        );
 
-                alert(
-                    "QR Tidak Valid"
-                );
+    }
+
+}
 
             }
 
         }
 
     );
+
+}
+
+function(decodedText){
+
+    alert(decodedText);
 
 }
 
