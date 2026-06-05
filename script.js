@@ -289,44 +289,19 @@ async function mulaiScanner(){
 
        function(decodedText){
 
-    if(
-        decodedText.startsWith(
-            "ABSENSI-"
-        )
-    ){
-
-        qrValid = true;
-
-        alert(
-            "QR Valid"
-        );
-
-        scanner.stop();
-
-    }else{
-
-        alert(
-            "QR Tidak Valid"
-        );
-
-    }
-
-}
-
-            }
-
+         if(decodedText.startsWith("ABSENSI-")){
+            qrValid = true;
+            alert("QR Valid");
+            scanner.stop();
+        }else{
+            alert("QR Tidak Valid");
+             
         }
 
-    );
+    }
+);
 
 }
-
-function(decodedText){
-
-    alert(decodedText);
-
-}
-
 /* ==========================
    DATA KEHADIRAN GURU
 ========================== */
@@ -587,7 +562,7 @@ async function exportExcel(){
 
     const kelasDipilih =
     document.getElementById(
-        "KelasExport"
+        "kelasExport"
     )?.value || "";
 
     if(kelasDipilih){
